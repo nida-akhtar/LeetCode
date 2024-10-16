@@ -13,27 +13,25 @@ public:
             return -1;
         }
         
-        // If the key is found, move the accessed element to the front (most recently used)
-        cacheList.splice(cacheList.begin(), cacheList, cacheMap[key]);
+        // Move the accessed key-value pair to the front (most recently used)
+        moveToFront(key);
         
-        // Return the value of the key
+        // Return the value associated with the key
         return cacheMap[key]->second;
     }
     
     // Put the key-value pair in the cache. If the number of keys exceeds the capacity, evict the least recently used key.
     void put(int key, int value) {
-        // If the key already exists, we update the value and move the key to the front (most recently used)
+        // If the key already exists, update the value and move it to the front
         if (cacheMap.find(key) != cacheMap.end()) {
-            cacheList.splice(cacheList.begin(), cacheList, cacheMap[key]);
+            moveToFront(key);
             cacheMap[key]->second = value;  // Update the value
             return;
         }
         
-        // If the cache is full, remove the least recently used element (at the back of the list)
+        // If the cache is full, remove the least recently used element (from the back)
         if (cacheList.size() == capacity) {
-            int leastUsedKey = cacheList.back().first;
-            cacheList.pop_back();
-            cacheMap.erase(leastUsedKey);
+            evictLRU();
         }
         
         // Insert the new key-value pair at the front (most recently used position)
@@ -42,12 +40,28 @@ public:
     }
 
 private:
-    // Define the capacity of the LRU cache
+    // Cache capacity
     int capacity;
     
-    // A list of key-value pairs where the most recently used element is at the front, and the least recently used is at the back
+    // List of key-value pairs, where the front is the most recently used and the back is the least recently used
     list<pair<int, int>> cacheList;
     
-    // An unordered map for fast access to the list nodes by key
+    // Unordered map for fast access to list nodes by key
     unordered_map<int, list<pair<int, int>>::iterator> cacheMap;
+
+    // Move the given key to the front of the list (most recently used)
+    void moveToFront(int key) {
+        // If the key is already at the front, no need to move it
+        if (cacheMap[key] != cacheList.begin()) {
+            cacheList.splice(cacheList.begin(), cacheList, cacheMap[key]);
+        }
+    }
+    
+    // Evict the least recently used element from the cache
+    void evictLRU() {
+        // Get the key of the least recently used element (back of the list)
+        int leastUsedKey = cacheList.back().first;
+        cacheList.pop_back();             // Remove the element from the list
+        cacheMap.erase(leastUsedKey);     // Erase it from the map
+    }
 };
