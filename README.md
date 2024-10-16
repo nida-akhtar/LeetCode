@@ -11,6 +11,7 @@
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/nida-akhtar/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0974-reorder-data-in-log-files](https://github.com/nida-akhtar/LeetCode/tree/master/0974-reorder-data-in-log-files) |
+| [1397-search-suggestions-system](https://github.com/nida-akhtar/LeetCode/tree/master/1397-search-suggestions-system) |
 ## Sliding Window
 |  |
 | ------- |
@@ -21,6 +22,7 @@
 | [0200-number-of-islands](https://github.com/nida-akhtar/LeetCode/tree/master/0200-number-of-islands) |
 | [0974-reorder-data-in-log-files](https://github.com/nida-akhtar/LeetCode/tree/master/0974-reorder-data-in-log-files) |
 | [1014-k-closest-points-to-origin](https://github.com/nida-akhtar/LeetCode/tree/master/1014-k-closest-points-to-origin) |
+| [1397-search-suggestions-system](https://github.com/nida-akhtar/LeetCode/tree/master/1397-search-suggestions-system) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -54,6 +56,7 @@
 | ------- |
 | [0974-reorder-data-in-log-files](https://github.com/nida-akhtar/LeetCode/tree/master/0974-reorder-data-in-log-files) |
 | [1014-k-closest-points-to-origin](https://github.com/nida-akhtar/LeetCode/tree/master/1014-k-closest-points-to-origin) |
+| [1397-search-suggestions-system](https://github.com/nida-akhtar/LeetCode/tree/master/1397-search-suggestions-system) |
 ## Math
 |  |
 | ------- |
@@ -70,8 +73,17 @@
 |  |
 | ------- |
 | [1014-k-closest-points-to-origin](https://github.com/nida-akhtar/LeetCode/tree/master/1014-k-closest-points-to-origin) |
+| [1397-search-suggestions-system](https://github.com/nida-akhtar/LeetCode/tree/master/1397-search-suggestions-system) |
 ## Quickselect
 |  |
 | ------- |
 | [1014-k-closest-points-to-origin](https://github.com/nida-akhtar/LeetCode/tree/master/1014-k-closest-points-to-origin) |
+## Binary Search
+|  |
+| ------- |
+| [1397-search-suggestions-system](https://github.com/nida-akhtar/LeetCode/tree/master/1397-search-suggestions-system) |
+## Trie
+|  |
+| ------- |
+| [1397-search-suggestions-system](https://github.com/nida-akhtar/LeetCode/tree/master/1397-search-suggestions-system) |
 <!---LeetCode Topics End-->
