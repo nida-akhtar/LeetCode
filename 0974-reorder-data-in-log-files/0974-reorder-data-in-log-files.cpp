@@ -1,50 +1,46 @@
 class Solution {
 public:
     vector<string> reorderLogFiles(vector<string>& logs) {
-        // Custom comparator for sorting the letter-logs
-        auto compare = [](const string& log1, const string& log2) {
-            // Find the first space to separate identifier from content
-            int pos1 = log1.find(' ');
-            int pos2 = log2.find(' ');
-            
-            // Extract the identifiers and contents
-            string id1 = log1.substr(0, pos1);
-            string id2 = log2.substr(0, pos2);
-            string content1 = log1.substr(pos1 + 1);
-            string content2 = log2.substr(pos2 + 1);
-            
-            // Compare contents of the logs
-            if (content1 == content2) {
-                // If contents are the same, compare by identifier
-                return id1 < id2;
-            }
-            // Otherwise, compare lexicographically by content
-            return content1 < content2;
-        };
+         int n = logs.size();
+         vector<pair<string,string>> dig;
+         vector<pair<string,string>> letter;
+         for(int i =0;i<n;i++){
+             int x = logs[i].size();
+             bool hua = false;
+             int j = 0;
+             string key ="";
+             while(logs[i][j]!=' '){
+                 key+=logs[i][j];
+                 j++;
+                 
+             }
+
+             for(int y = j;y<x;y++){
+                if(logs[i][y-1]==' ' && (logs[i][y]>='0' && logs[i][y] <='9')){
+                    dig.push_back({key,logs[i].substr(key.size()+1,(logs[i].size()-key.size() + 1))});
+                    
+                    hua =true;
+                    break;
+                }
+             }
+             if(!hua)  letter.push_back({key,logs[i].substr(key.size()+1,(logs[i].size()-key.size() + 1))});
+         }
+
+          sort(letter.begin(),letter.end(),[](pair<string,string> a, pair<string,string> b){
+                  if(a.second == b.second) return a.first<b.first;
+                  return a.second<b.second;
+          });
         
-        // Separate letter-logs and digit-logs
-        vector<string> letterLogs, digitLogs;
-        
-        for (const string& log : logs) {
-            // Find the first space after the identifier
-            int pos = log.find(' ');
-            
-            // Check if it's a digit-log or letter-log by looking at the first character after the space
-            if (isdigit(log[pos + 1])) {
-                // It's a digit-log
-                digitLogs.push_back(log);
-            } else {
-                // It's a letter-log
-                letterLogs.push_back(log);
-            }
-        }
-        
-        // Sort letter-logs using the custom comparator
-        sort(letterLogs.begin(), letterLogs.end(), compare);
-        
-        // Combine the sorted letter-logs and original digit-logs
-        letterLogs.insert(letterLogs.end(), digitLogs.begin(), digitLogs.end());
-        
-        return letterLogs;
+         vector<string> ans;
+         for(int i =0;i<letter.size();i++){
+            string s = letter[i].first + " " + letter[i].second;
+              ans.push_back(s);
+         }
+         for(int i =0;i<dig.size();i++){
+            string s = dig[i].first + " " + dig[i].second;
+              ans.push_back(s);
+         }
+         return ans;
+         
     }
 };
