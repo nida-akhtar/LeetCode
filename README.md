@@ -5,6 +5,7 @@
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/nida-akhtar/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0146-lru-cache](https://github.com/nida-akhtar/LeetCode/tree/master/0146-lru-cache) |
 ## String
 |  |
 | ------- |
@@ -33,4 +34,16 @@
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/nida-akhtar/LeetCode/tree/master/0200-number-of-islands) |
+## Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/nida-akhtar/LeetCode/tree/master/0146-lru-cache) |
+## Design
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/nida-akhtar/LeetCode/tree/master/0146-lru-cache) |
+## Doubly-Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/nida-akhtar/LeetCode/tree/master/0146-lru-cache) |
 <!---LeetCode Topics End-->
