@@ -1,35 +1,18 @@
 #include <vector>
-#include <queue>
+#include <algorithm>
 using namespace std;
 
 class Solution {
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int K) {
-        // Max-heap to store the K closest points by their squared distance
-        priority_queue<pair<int, vector<int>>> maxHeap;
+        // Sort the points based on their Euclidean distance from the origin
+        sort(points.begin(), points.end(), [](const vector<int>& p1, const vector<int>& p2) {
+            int dist1 = p1[0] * p1[0] + p1[1] * p1[1];  // Squared distance of point 1
+            int dist2 = p2[0] * p2[0] + p2[1] * p2[1];  // Squared distance of point 2
+            return dist1 < dist2;  // Sort by increasing distance
+        });
         
-        // Iterate over all points
-        for (const vector<int>& point : points) {
-            int x = point[0];
-            int y = point[1];
-            int dist = x * x + y * y; // Calculate squared distance to avoid floating-point operations
-            
-            // Push the current point into the heap with its distance
-            maxHeap.push({dist, point});
-            
-            // If the heap size exceeds K, remove the farthest point
-            if (maxHeap.size() > K) {
-                maxHeap.pop();
-            }
-        }
-        
-        // Extract the K closest points from the heap
-        vector<vector<int>> result;
-        while (!maxHeap.empty()) {
-            result.push_back(maxHeap.top().second);
-            maxHeap.pop();
-        }
-        
-        return result;
+        // Return the first K points (closest points)
+        return vector<vector<int>>(points.begin(), points.begin() + K);
     }
 };
