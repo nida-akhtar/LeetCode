@@ -23,6 +23,7 @@
 | [0974-reorder-data-in-log-files](https://github.com/nida-akhtar/LeetCode/tree/master/0974-reorder-data-in-log-files) |
 | [1014-k-closest-points-to-origin](https://github.com/nida-akhtar/LeetCode/tree/master/1014-k-closest-points-to-origin) |
 | [1397-search-suggestions-system](https://github.com/nida-akhtar/LeetCode/tree/master/1397-search-suggestions-system) |
+| [1478-maximum-number-of-events-that-can-be-attended](https://github.com/nida-akhtar/LeetCode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -57,6 +58,7 @@
 | [0974-reorder-data-in-log-files](https://github.com/nida-akhtar/LeetCode/tree/master/0974-reorder-data-in-log-files) |
 | [1014-k-closest-points-to-origin](https://github.com/nida-akhtar/LeetCode/tree/master/1014-k-closest-points-to-origin) |
 | [1397-search-suggestions-system](https://github.com/nida-akhtar/LeetCode/tree/master/1397-search-suggestions-system) |
+| [1478-maximum-number-of-events-that-can-be-attended](https://github.com/nida-akhtar/LeetCode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 ## Math
 |  |
 | ------- |
@@ -74,6 +76,7 @@
 | ------- |
 | [1014-k-closest-points-to-origin](https://github.com/nida-akhtar/LeetCode/tree/master/1014-k-closest-points-to-origin) |
 | [1397-search-suggestions-system](https://github.com/nida-akhtar/LeetCode/tree/master/1397-search-suggestions-system) |
+| [1478-maximum-number-of-events-that-can-be-attended](https://github.com/nida-akhtar/LeetCode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 ## Quickselect
 |  |
 | ------- |
@@ -86,4 +89,8 @@
 |  |
 | ------- |
 | [1397-search-suggestions-system](https://github.com/nida-akhtar/LeetCode/tree/master/1397-search-suggestions-system) |
+## Greedy
+|  |
+| ------- |
+| [1478-maximum-number-of-events-that-can-be-attended](https://github.com/nida-akhtar/LeetCode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 <!---LeetCode Topics End-->
